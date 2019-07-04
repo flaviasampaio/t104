@@ -1,0 +1,143 @@
+body{
+    background-color:rgb(42, 46, 83);
+    margin: 0;
+    display: grid;
+    grid-template-areas: 'nav nav nav nav'
+                        'header section segunda div'
+                        'footer footer footer footer';
+    grid-template-rows: 20vh 70vh 35vh;
+}
+
+nav{
+    grid-area: nav;
+    background-color:#023859;
+    display:flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+nav iframe{
+    width: 9%;
+}
+
+nav a{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18pt;
+    color: white;
+}
+
+nav a:hover{
+    color: orange;
+}
+
+header, section, div, .segunda{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+h2{
+    font-family: 'Raleway', sans-serif;
+    color: #049DD9;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+img{
+    width:200px;
+    height: 200px;
+    border-radius:10%;
+    border: 4px double white;
+
+}
+
+header{
+    grid-area: header;}
+
+section{
+    grid-area: section;
+}
+
+.segunda{
+    grid-area: segunda;
+}
+
+div{
+    grid-area: div;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #0D0D0D;
+}
+
+footer p{
+    color: white;
+}
+
+.divfoot{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.divfoot p{
+    padding-top:35px;
+    text-align-last: center;
+}
+
+@media (max-width:760px ){
+    body{
+        grid-template-areas: 'nav nav nav nav'
+                            'header header section section'
+                            'segunda segunda div div'
+                            'footer footer footer footer';
+        grid-template-rows: 20vh 70vh 70vh 40vh;
+    }
+
+    .divfoot{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:425px ){
+    body{
+        grid-template-areas: 'nav nav nav nav'
+                            'header header header header'
+                            'section section section section'
+                            'segunda segunda segunda segunda'
+                            'div div div div'
+                            'footer footer footer footer';
+        grid-template-rows: 20vh 70vh 70vh 70vh 70vh 40vh;
+    }
+}
+
+@media (max-width:425px ){
+    body{
+    grid-template-areas: 'nav nav nav nav'
+                            'header header header header'
+                            'section section section section'
+                            'segunda segunda segunda segunda'
+                            'div div div div'
+                            'footer footer footer footer';
+    grid-template-rows: 20vh 70vh 70vh 70vh 70vh 130vh;
+    }
+
+    .divfoot{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
